@@ -226,7 +226,7 @@ def Operon_manage(operon_file,targetOperon_dic,targetAnno_dic):### profile the g
         operonSNP_lst = targetOperonRev_dic[ech_operon]
         for ech_snp in operonSNP_lst:
             ech_snp_type = targetAnno_dic[ech_snp][tab_snpType - 1]
-            if ech_snp_type == "CDS_nonSynon":
+            if ech_snp_type == "CDS_nonSynon" or ech_snp_type == "upstream":
                 targetClustRev_dic[ech_operon] = operonSNP_lst
                 break
         else:
